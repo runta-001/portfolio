@@ -1,0 +1,834 @@
+@charset "utf-8" ;
+
+body {
+   /* background-color: rgb(245, 213, 191); */
+   /*全体仮*/
+   width: 1366px;
+   /* height: 5907px ; */
+   /* margin: auto; */
+
+   overflow: auto;
+   font-family: 'Zen Kaku Gothic New', sans-serif;
+ }
+ img {
+  max-width: 100%;
+ }
+
+ .inner {
+  margin: 0 83px;
+  background-color: #f4f4f4;
+}
+
+ header {
+  width: 1366px;
+  height: 768px;
+  background-image: url(../../tainan/images/top.png);   /*共通する上の画像*/
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center 90%;
+  margin: auto;
+  position: relative;
+}
+
+ .title{
+  margin: -10px 0px  -100px  100px;          /*上・右・下・左*/ 
+ }
+ .midashi{
+  width: 530px;
+  height: 96px;
+  margin: 20px 0px  0px  0px;          /*上・右・下・左*/ 
+ }
+
+/*ここからパンくず*/
+ .Breadcrumb {
+  padding: 1em;
+  margin: -50px  0px  0px  -50px; /*上・右・下・左*//*共通する上の画像*/
+}
+.bread {
+  display: flex;
+}
+
+
+.Breadcrumb-ListGroup > * + * {
+  margin-left: 0.5em;
+}
+.Breadcrumb-ListGroup > * + *::before {
+  content: ">";
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+}
+ .headerLogo img{
+  margin: -60px 0px  0px  20px;             /*上・右・下・左*/        /*共通する上の画像*/
+  width: 154px; 
+}
+.introduction{
+  color: #ffffff;
+  font-weight: bold;
+ justify-content: flex-end;
+ margin: -100px 85px  10px  950px;          /*上・右・下・左*/      /*ヘッダーにかかる紹介文*/
+ width: 467px;
+}
+
+
+.bigLogo img{
+margin: -30px  0px  134.18px  363px;      /*上・右・下・左*/       /*でかい台北*/
+width: 300px;
+height: 539.82px;
+}
+
+
+/*ヘッダーSNS*/
+.headerSns {
+  margin: -200px 85px  10px  60px; /*上・右・下・左*/       
+  position: absolute;
+  
+
+  left: 20px;
+  bottom: 80px;
+}
+
+/*ナビ*/
+ ul{
+  display: flex;
+  margin: 24px 0 0 618px;
+}
+
+a{
+ text-decoration: none;                                             /*ナビ色*/
+ color: #fff;
+}
+
+/*ヘッダーSNSにカーソルを乗せたらセピア色にする*/
+.headerSns a:hover{
+  filter: sepia(100%);
+}
+
+/*ナビ*/
+ header li{
+  margin: 40px 20px 0 0;
+  font-size: 24px;
+  list-style-type:none;  
+  font-weight: bold;
+}
+
+/*リストのリンクに下線を引く*/
+li a:hover{
+  text-decoration: underline wavy rgb(255, 131, 126) 5px;
+}
+
+    /*
+    .sectionPei01{
+      height: 879px;
+      width: 1366px;
+     } */
+
+  .access{
+    display: flex
+  }
+/*///////////////////////ヘッダーここまで！////////////////////////////*/
+
+
+/*///////////////////////PCフッターエリア開始////////////////////////////*/  
+
+/* 全体の設定 */
+.footer { /*背景と文字の色*/
+  height: 428px;
+  font-size: 15px;
+  color: #fff;
+  background: #007AB7;
+  width: 1366px;
+}
+footer a:hover {  /*カーソルを合わせると赤いライン*/
+  text-decoration:underline;
+  color: #FF0000;
+}  
+
+/* PCフッター ナビゲーション、ロゴ、SNSセクションの設定 */
+.footerCon {
+  padding: 0 83px;
+  display: flex;
+  justify-content: space-between;
+}
+/* セクションを3分割に */
+.grid, .logoSec, .snsCon {
+  width : calc(100% / 3) ;
+}
+
+/* PCフッター 国旗の位置設定 */
+.kokkiLogo {
+  text-align: center;
+ padding: 40px 0 28px 0;
+}
+
+.kokkiLogo img {
+  width: 64px; 
+  height: 48px;
+}
+
+/* PCフッター ナビゲーションの設定 */
+
+.footerNav {  
+  width: 332px;
+  height: 292px;
+}
+.grid {
+  padding-bottom: 20px;
+}
+.footer__navi-heading {
+  font-weight: 600;
+} 
+.footerNav li {
+  display: flex;
+  align-items: flex-end;
+  height: 52px;
+  border-bottom: 1px solid #fff ;
+}
+.footerNav li:first-child {
+  height: auto;
+}
+
+/* PCフッター ロゴの位置調整 */
+
+.underLogo {
+  text-align: center;
+  align-self: flex-end;
+  padding-bottom: 20px;
+}
+.underLogo img  {
+  width: 240px; 
+  height: 100px;
+}
+
+/* PCフッター SNSの位置調整 */
+
+.sns-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+.sns-btn li {
+  margin-right: 20px;
+}
+.snsCon {
+  align-self: flex-end;
+}
+/* PCフッター コピーライトの設定 */
+.copyright {
+  font-size: 12px;
+  width: 1366px;
+  text-align: center;
+  border-top:1px solid #03A9F4;
+  padding: 20px 0;
+  color: #fff;
+  background: #007AB7;
+}
+/*///////////////////////PCフッターここまで！////////////////////////////*/
+
+
+
+  main a {
+    color: black;
+  }  
+   .photo01 img {
+    margin: 20px;
+    margin-right: 30px;
+    width: 600px;
+    height: 304px;
+   }
+
+   /* （写真とそのヨコの文章）の 01 と　02　を横並びに */
+   .photoWrap01 {
+    display: flex;
+   }
+
+   .attImg {
+    display: flex;
+    width: 600px;
+    margin: 20px;
+    justify-content: space-between;
+   }
+   
+    .photo02, .photo03, .photo05, .photo06 {
+      width: 290px;
+      height: 167px;
+    }
+
+    .photo04 img {
+      margin: 20px;
+      margin-right: 30px;
+      width: 600px;
+      height: 336px;
+     }
+     .photoWrap02 {
+      display: flex;
+     }
+
+  
+  /* アトラクション 観光名所 について */
+  /* 画像の配置について */
+  .atrcErea {
+    /* width: 51%; */
+    width: 1160px;
+    background-color: #f4f4f4;
+     margin: 0 auto 50px; /* 上・左右・下 */
+
+  } 
+
+  /* ↓↓↓↓ グリッドレイアウト ↓↓↓↓ */
+  /* sp作るときに少し大変そうだったので一旦これはやめた */
+  /*.photoWrap01 {
+    width: 52%;
+    background-color: silver;
+    border: 1px solid red;
+  }
+  
+  .photoWrap02 {
+    width: 52%;
+    height: 40%;
+    background-color: gold;
+    border: 1px solid gold;
+  }
+  
+  .photoWrap01 {
+    display: grid;
+      /* grid-template-rows: 40vw 30vw;    /* rows=行（ぎょう）, タテの分割, 40vwと30vwのセルの高さ */
+      /* grid-template-columns: 50% 50%;   /* ヨコの分割, 左右の割合,  
+  }
+  .photo01{  /* 個々の画像に付けたクラス名, カピP253
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .photo02{  /* 個々の画像に付けたクラス名, カピP253
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  /* ↑↑↑↑ グリッドレイアウト（保留にした） ↑↑↑↑ */
+
+  .atrcText01 {
+    width: 500px;
+    height: 304px;
+    background-color: rgba(100, 201, 155, 0.2);
+    color: black;
+    font-size: 20px;
+    margin: 20px;
+    margin-left: 30px;
+    padding: 40px;
+    line-height: 1.6; /* 行間は単位なしが推奨されてる カピP138 , igmaの行間÷figmaの文字サイズpx=行間, 32÷20=1.6 */
+  }
+
+  .atrcText02 {
+    background-color: rgba(100, 201, 155, 0.2);
+    color: black;
+    margin: 20px;
+    height: 160px;
+    width: 500px;
+    font-size: 20px;
+    line-height: 1.6; /* 行間は単位なしが推奨されてる カピP138 , igmaの行間÷figmaの文字サイズpx=行間, 32÷20=1.6 */
+    /* opacity: 20%; */
+  }
+  .atrcText02 p {
+    padding: 48px 40px;
+  }
+
+
+  .atrcText04 {
+    width: 500px;
+    height : 160px;
+    background-color: rgba(100, 201, 155, 0.2);
+    color: black;
+    font-size: 20px;
+    margin: 20px; /* 20px */
+    margin-left: 30px;
+    padding: 40px;
+    line-height: 1.6; /* 行間は単位なしが推奨されてる カピP138 , igmaの行間÷figmaの文字サイズpx=行間, 32÷20=1.6 */
+    /* opacity: 20%; */
+  }
+
+  .atrcText03 {
+    background-color: rgba(100, 201, 155, 0.2);
+    color: black;
+    margin: 20px;
+    height: 336px;
+    width: 500px;
+    font-size: 20px;
+    line-height: 1.6; /* 行間は単位なしが推奨されてる カピP138 , igmaの行間÷figmaの文字サイズpx=行間, 32÷20=1.6 */
+    /* opacity: 20%; */
+  }
+  .atrcText03 p {
+    padding: 48px 40px;
+  }
+  .border01 { /* 装飾,  */
+    width: 480px;
+    height: 80px;
+    border-bottom: 1px solid #000000;
+    margin: 0 auto;
+  }
+
+  .border02 { /* 装飾, グルメの横棒線 */
+    width: 510px;
+    height: 40px;
+    border-bottom: 1px solid #000000;
+    margin: 0 auto;
+  }
+
+  .border03 { /* 装飾, 一番下の横棒線  */
+    width: 480px;
+    height: 80px;
+    border-bottom: 1px solid #000000;
+  }
+
+  .atrcBox02 {
+    background-color: rgba(100, 201, 155, 0.2);
+    color: black;
+    font-size: 20px;
+    margin: 40px;
+    margin-left: 40px;
+    /* margin-top: 20px; */
+
+    padding: 20px;
+  }
+
+/*.grmErea .pkErea{
+      width: 1080px;
+      margin: 0 auto; 上・左右・下 */
+
+    .grmP { /* 装飾, グルメの横棒線 */
+      font-size: 20px;
+      width: 420px;
+      height: 216px;
+      border-top: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+      margin: 0 60px;
+      padding: 60px 0;
+      line-height: 1.6; /* 行間は単位なしが推奨されてる カピP138 , igmaの行間÷figmaの文字サイズpx=行間, 32÷20=1.6 */
+    }
+  
+    /* グルメ コーナー　について */
+    .grmCorner {
+      /* width: 51%; */
+      width: 1080px;
+      margin: 0 auto 80px;  /* 上・左右・下 */
+    
+      /* width: 600px; */
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .grmCorner p{
+      font-size: 20px;
+      margin-top: 20px;
+      line-height: 1.6; /* 行間は単位なしが推奨されてる カピP138 , igmaの行間÷figmaの文字サイズpx=行間, 32÷20=1.6 */
+    }
+
+    /* ↓↓↓↓ ピックアップのbox について 開始 ↓↓↓↓*/
+    .pkAbox, .pkBbox {
+      width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .pkBox01, .pkBox05 {
+      width: 600px;
+    }
+
+    .pkBox02 {
+      width: 420px;
+      margin-left: 60px; /* 個別にpkBox02,4,6,7の左の境界線の外側に余白を付けた */
+    }
+
+    .pkBox03, .pkBox04 {
+      width: 510px;
+      margin-top: 60px;
+    }
+    
+    .pkBox04 {
+      margin-left: 60px;
+    }
+
+    .pkBox06 {
+      width: 420px;
+      height: 96px;
+      margin-left: 60px;
+    }
+    
+    .pkBox07 {
+      width: 420px;
+      height: 209px;
+      margin-left: 60px;
+    }
+
+    .pkBoxBox { /* pkBox06とpkBox07　を囲っている箇所について */
+      width: 420px;
+      display: flex;
+      flex-wrap: wrap;
+    } 
+
+    .pkBox08 {
+      margin:80px auto; /* 上下の境界線の外側の余白に80pxを指定, 左右は余白を均一で指定 */
+      text-align: center;
+    }
+
+    .pkErea {
+      font-size: 20px;
+      line-height: 1.6; /* 行間は単位なしが推奨されてる カピP138 , igmaの行間÷figmaの文字サイズpx=行間, 32÷20=1.6 */
+      /* margin: 0 90px; */
+    }
+
+    .pkBox09 { /* 見出し付近の文章, 「きらびやかな都心や歴史情緒ある～」 */
+      width: 420px;
+      padding-top: 20px;
+      padding-bottom: 60px;
+      padding-left: 60px;
+    }
+
+    .pkH3 { /* h3の「蓮と温泉の国　白河」 */
+      padding-bottom: 20px;
+      border-bottom: 1px solid #000000;
+      width: 420px;
+      margin-left: 60px;
+      text-align: center;
+    }
+    
+
+
+
+
+    /* ↑↑↑↑ ピックアップのbox について 終了 ↑↑↑↑*/
+    
+
+    .grBox01, .grBox02, .grBox03, .grBox04 {  /* タンツーメンの写真＋文章 あの一帯のもの */
+      width: 510px;
+      margin-top: 60px;
+    }
+
+    .grBox02, .grBox04 {
+      margin-left: 60px;
+    }
+    .gazoMiru {
+      margin-top: 40px;
+    }
+
+
+    .grH {
+      display: inline;
+
+    }
+    .grHp {
+      display: inline;
+
+    }
+  
+  
+   h2 {
+    font-size: 48px;
+    width: 530px;
+    height: 96px;
+    margin-left: 20px;
+    margin-bottom: 80px;
+    text-align: center;
+    background: url(../images/pcMidasi.png) no-repeat left/contain;
+   }
+  span {    /* 各見出しの右側の文字サイズ */
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .grmErea h2 {
+    margin-left: 650px;
+  }
+
+   h3 {    /* ページ全体のh3, 蓮と温泉の国　のH3もこれでOK */
+    font-size: 36px;
+    margin: 0 20px;
+   }
+
+   .atrcH3 {    /* 安平老街　などのh3 */
+    font-size: 36px;
+    font-weight: bold;
+    /* margin-left: 20px; */
+   }
+
+   .grmH3 {    /* 漢字の方のタンツーメン　などのh3 */
+    font-size: 36px;
+    font-weight: 300;
+   }
+
+   
+
+/* モーダル */
+
+/* 背景の設定 */
+.modal {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color:rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+/* ウィンドウ本体の設定 */
+.modalWin {
+  display: none;
+  width: 675px;
+  height: 675px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 250;
+  animation-name: openClose;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+/* 写真の設定 */
+.modalWin .mainPhoto {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  width: 555px;
+  height: 555px;
+}
+
+/* 閉じるボタンの設定 */
+.modalWin .closePhoto {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+}
+/* オープン時のアニメーション設定 */
+@keyframes openClose {
+  0% {
+      transform: scale(0);
+      transform-origin: bottom;
+      transform-origin: left;
+  }
+  100% {
+      transform: scale(1);
+      transform-origin: bottom;
+      transform-origin: left;
+  }
+}
+
+/* スマホ用ハンバーガーメニューを非表示に */
+.hanMenu {
+  display: none;
+}
+
+
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #007AB7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* ローディング画面のロゴ用 */
+.loadLogo {
+  z-index: 10;
+  width: 318px;
+  height: 128px;
+  animation-name: loadingAnime;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+/* ロゴのアニメーション設定 */
+@keyframes loadingAnime {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* ローディング画面を消去するときのクラス */
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+/*///////////////////////////// ここまで //////////////////////////*/
+
+
+
+/* モバイル版 */
+/* 画面幅  768px 以下まで の画面幅に下記のスタイルを適用させる */
+@media screen and (max-width: 768px) {
+    /* スマホ用ローディング画面ロゴ */
+    .loadLogo {
+      z-index: 10;
+      width: 287px;
+      height: 117px;
+  }
+  /*///////////////////////// ハンバーガーメニュー //////////////////////*/
+  .hanMenu {
+      display: block;
+  }
+  /* ハンバーガーメニューの三アイコン画像 */
+  .hanNavOpen {
+      right: 0;
+      margin: 4px;
+      position: fixed;
+      z-index: 99;
+  }
+  /* ハンバーガーメニュー本体 */
+  .hanNav {
+      position: fixed;
+      right: -225px;
+      top: 0;
+      height: 677px;
+      width: 225px;
+      background-color: #000;
+      opacity: .8;
+      color: #f4f4f4;
+      text-align: center;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      z-index: 99;
+      transition: transform 0.3s;
+  }
+
+  .hanNav p {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 60px;
+  }
+
+  .hanNav li {
+      line-height: 1.5rem;
+      font-size: 20px;
+      height: 20px;
+      margin-bottom: 20px;
+  }
+
+  .hanLogoSec {
+      height: 132px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  /* ハンバーガーメニューのバツ */
+  .batu img {
+      width: 48px;
+      height: 48px;
+  }
+  .hanLogo img {
+      height: 40px;
+      width: 101px;
+  }
+  /* javascript用 */
+  /* オープンボタンを押したときの処理 */
+  .open {
+      transform: translate(-225px);   /*トランスフォームでスライド*/
+  }
+
+  /* オープンボタンが押された時三ボタンを隠す */
+  .openDel {
+      transform: translate(50px);
+  }
+
+  /*////////////////////////// SP用 ハンバーガーメニューここまで//////////////////// */
+ 
+
+
+  /*/////////////////////// SP用 フッターエリア開始 ////////////////////////////*/ 
+  .footer { 
+      height: 349px;
+      width: auto;
+  }
+  
+  /* SP用 三分割していたナビゲーション、ロゴ、SNSを縦に戻す
+      ロゴの位置を自由に決めるためposition: relative;を設定 */
+  .footerCon {
+      padding: 0 20px;
+      display: block;
+      position: relative;
+  }
+  
+  /* ここで三分割を戻してます */
+  .grid, .logoSec, .snsCon {
+      width: auto;
+  }
+  
+  /* SP用 国旗エリアの再設定 */
+  .kokkiLogo {
+      padding: 20px 0;
+  }
+  .kokkiLogo img {
+      width: 32px;
+      height: 24px;
+   }
+  
+  /*　SP用 ナビゲーションエリアの再設定 */
+  .footerNav {  
+      font-size: 12px;
+      width: 195px;
+      height: 167px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+  }
+  .grid {
+      padding-bottom: 40px;
+  }
+  
+  .footerNav li {
+      height: 30px;
+      line-height: 1.5rem;
+  }
+  
+  .footerNav li:first-child {
+      height: auto;
+  }
+  
+  /* SP用 ロゴの再設定 */
+  .underLogo img  {
+      width: 71px; 
+      height: 28px;
+  }
+  .underLogo {
+      display: inline;
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 12px;
+  }
+  
+  /*SP用 フッター SNSの再設定 */
+  .sns-btn {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 12px;
+  }
+  .sns-btn li {
+      margin: 0 10px;
+  }
+  /* SP用 コピーライトの再設定 */
+  .copyright {
+      font-size: 10px;
+      width: auto;
+      padding: 12px 0;
+  }
+  /*/////////////////////// SP用 フッターエリア終了 ////////////////////////////*/
+
+  }
