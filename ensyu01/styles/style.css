@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.concepServicetArea {
+  padding:0 12px;
+}
+
+.concepServicetArea {
+  padding:0 12px;
+}
+
+h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.1em; /* 文字間隔…隣り合う文字と文字の間隔, 10 ÷100=0.1em */
+    text-align: center;
+    /* margin:0 auto; */
+    /* width: 158px; */
+    /* height: 28px; */
+}
+.cTitle {  /* h2の下の小さい青文字のタイトル */
+  font-family: Noto Serif JP;
+  font-size: 12px;
+  color: #223E69;
+  display: block;
+  text-align: center;
+}
+
+.conceptSubTitle {
+    font-size: 20px;
+    font-weight: 500; /* 文字の太さを、Noto Sans JP のMediumの値の500に指定（mediumだと適用されなかったため） */
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+.conceptP {
+  line-height: 2; /* 行間28px ÷文字サイズ14px=2 */
+  letter-spacing: 0.1em; /* 文字間隔…隣り合う文字と文字の間隔, 10 ÷100=0.1em */
+}
+h3 {
+  font-family: Noto Serif JP; /* ここは Noto Serif JP */
+  font-size: 20px;
+  text-align: center;
+}
+.h3Content {
+  line-height: 1.5; /* 行間21px ÷文字サイズ14px=1.5 */
+  letter-spacing: 0.1em; /* 文字間隔…隣り合う文字と文字の間隔, 10÷100=0.1em */
+}
+
+.more {
+  display: block;
+  text-align: right;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 16px 65.5px;
+}
+
+footer a{
+  text-align: right;
+}
+
+img {
+  max-width: 100%;
+}
+
+.heroSec {
+  padding-bottom: 48px;
+  /* border: 3px solid #B71B26; */
+}
+
+.flowSec ol {
+  display: block;
+  text-align: center;
+}
+
+.flowSec ol li {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 32px;
+  width: 320px;
+}
+
+
+/* .flowSec{
+  z-index: ;
+  background-color: #223E69;
+  opacity: 0.5;
+} */
+
+/* 以下はハンバーガーメニュー */
+/* メニューを画面上部に固定表示しています */
+.gMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    /* border: 3px solid #00ff00; */
+  }
+  /* メニューアイコンを画面右上に固定しています */
+  .gMenu .menu-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    padding-top: 16px;
+    height: 12px;
+  }
+  /* メニューアイコン（三本線）の真ん中の線です */
+  .gMenu .menu-icon .navicon {
+    background: #B71B26; /* 色は自由に変更可能です */
+    display: block;
+    height: 2px; /* 太さ */
+    width: 31px; /* 長さ */
+    position: relative;
+    transition: background .4s ease-out; /* 形が変わる時のアニメーション */
+  }
+  /* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+  .gMenu .menu-icon .navicon::before,
+  .gMenu .menu-icon .navicon::after {
+    background: #B71B26; /* 色は自由に変更可能です */
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .4s ease-out; /* 形が変わる時のアニメーション */
+    width: 100%;
+  }
+  .gMenu .menu-icon .navicon::before {top: 10px;} /* 位置を上にずらしています */
+  .gMenu .menu-icon .navicon::after {top: -10px;} /* 位置を下にずらしています */
+  /* 表示されるメニューです */
+  .gMenu .menu {
+    background-color: rgba(255,255,255,0.9);
+    overflow: hidden;
+    max-height: 0; /* ★最初は高さを0にして非表示状態に */
+    transition: max-height .6s; /* 表示されるときのアニメーション */
+    text-align: center;
+  }
+  /* メニュー部分のデザインです */
+  .gMenu .menu li:first-of-type {
+    padding-top: 50px;
+  }
+  .gMenu .menu li a {
+    display: block;
+    padding: 24px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .gMenu .menu li a:hover {
+    background-color: #f4f4f4;
+  }
+  /* チェックボックスは常に非表示です */
+  .gMenu .menu-btn {
+    display: none;
+  }
+  /* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+  .gMenu .menu-btn:checked ~ .menu {
+    max-height: 338px; /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+    transition: max-height .6s;
+  }
+  /* メニューボタンの中央の線を非表示に */
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon {background: transparent;}
+  
+  /* メニューボタンの上下の線を45度傾けて✕印を作ります */
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon::before {transform: rotate(-45deg);top: 0;}
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon::after {transform: rotate(45deg);top: 0;}
+
+header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+}
