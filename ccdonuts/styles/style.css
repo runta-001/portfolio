@@ -1,0 +1,390 @@
+@charset "utf-8";
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 375px;
+}
+
+.hdInner {
+  padding: 16px 12px;
+}
+
+footer {
+  padding: 12px;
+}
+
+header, footer {
+  background-color: #EDE0D4;
+}
+
+header {
+  height: 130px;
+/*  position: fixed;  スクロールしても、この要素をこの場所に固定する。基点は左上。ハンバーガーができたら、この27行目のコメントアウトを解除して、fixed　を適用させる */
+  top: 0;
+  left: 0;
+  right: 0;
+/*  width: 100%;  PC用にするときに使う 横幅 100% */
+}
+
+
+/* ヘッダーのccドーナツのロゴ */
+.ccLogoHd {
+  display: block;
+  width: 62px;
+  height: 53px;
+}
+/*margin-left: 145px; /* 157-12=145px */
+/*margin-right: 62px; /* 157-12=145px */
+
+/* ヘッダー右上のメニューの位置を調整 */
+.headerMenuRight ul {
+  width: 100px;  /* 82 */
+  height: 50px;  /* 35 */
+  margin-top: 8px; /* 上に余白 */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ログインアイコンとカートアイコンの左側に余白 */
+.headerMenuRight li {
+  margin-left: 12px;
+}
+
+
+ /* メモ：ログインとカートのアイコンをflexで横並びにしてるつもりだけどならないので、対応する */
+
+.hdLink {
+  display: flex;
+  justify-content: space-between;
+}
+
+  /* .searchBox */
+
+
+  /* 検索ボタンの虫めがね */
+  .searchIcon {
+    border-color: #7F5539;
+    height: 37px;
+    width: 34px;
+    background-color: #D9D9D9;
+  }
+
+
+/* ハンバーガーメニュー　開始 */
+/* ===============================================
+ヘッダーのスタイリング
+=============================================== */
+.headerContainer {
+  max-width: 375px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+  color: #fff;
+  /* padding: 0 25px; */
+  /* margin-right: auto; */
+  /* margin-left: auto; */
+}
+.header__logo a {
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ===============================================
+ハンバーガーボタンのスタイリング
+=============================================== */
+input[type="checkbox"] {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.hamburger {
+  display: block;
+  width: 25px; /* 三本線の横棒の長さ */
+  height: 43px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 三本線のスタイル */
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #7F5539; /* 三本線の色 */
+  transition: all 0.5s;
+}
+.hamburger span::before {
+  top: -10px;
+}
+.hamburger span::after {
+  bottom: -10px;
+}
+input[type="checkbox"]:checked + .hamburger span {
+  background-color: transparent;
+}
+input[type="checkbox"]:checked + .hamburger span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+input[type="checkbox"]:checked + .hamburger span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* ===============================================
+メニューのスタイリング
+=============================================== */
+.nav {
+  position: fixed;
+  width: 80%;
+  height: 100vh;
+  top: 53px;
+  right: -120%;
+  background-color: #7F5539;
+  opacity: 0.75; /* 単位は不要 */
+  color: #fff;
+  padding: 50px 0;
+  transition: all 0.5s;
+}
+.nav__item a {
+  display: block;
+  font-size: 16px;
+  border-bottom: 1px solid #fff; /* 1pxの実線を白で引く */
+  padding: 20px 0 20px 50px;
+  text-transform: uppercase;
+}
+.nav__item a:hover {
+  color: #7F5539;
+  background-color: #fff;
+}
+input[type="checkbox"]:checked ~ .nav {
+  right: 0;
+}
+/* ハンバーガーメニュー　終了 */
+
+/* フッター　開始 */
+footer ul {
+  margin: 0px;
+  padding: 0px;
+  /* padding-left: 12px; */
+}
+
+footer ul li {
+  font-size: 12px;
+}
+
+.logoInsta {
+  margin: 0 20px; /* 上下・左右の余白を指定 */
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #7F5539;
+}
+
+/* sns */
+.snsArea ul {
+  /* width: 375px; */
+  display: flex;
+  /* justify-content: flex-start; */
+}
+
+/* 空のエリア, フッターロゴの為のもの */
+.karaArea {
+  height: 100px;
+}
+
+/* フッターのccドーナツのロゴ 166*/
+.ccLogoFt {
+  top: 2068px;
+  position: absolute;
+  left: 291px;
+  /*  text-align: right;  要素の位置を一番右側へ */
+  /*  margin:20px 12px 8px 0px; /* 境界線の外側の余白、うえ、みぎ、した、ひだり */
+}
+
+/* 著作権表記 */
+footer p {
+  font-size: 10px; /* 文字サイズ */
+  color: #7F5539; /* 文字の色 */
+  border-top: 1px solid #7F5539; /* 著作権マークの上の横棒 */
+  padding: 12px 0px;
+  margin-bottom: 0px;
+
+  text-align: center; /* 要素の位置を横方向の中央へ */
+}
+/* フッター　終了 */
+
+/* ////////// お知らせ エリア 開始 ////////// */
+
+/* お知らせ、ランキングにインナーを設置 */
+.inner {
+  margin: 20px 20px 21px ; /* うえ、左右、した */
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* お知らせ、ランキング の画像 */
+.donutGp01 img, .donutGp02 img {
+  width: 157.5px;
+  height: 157px;
+}
+
+/* お知らせ、ランキング を横並びにする*/
+.donutGp01, .donutGp02 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imagesPc03 {
+  width: 335px;
+  height: 83px;
+  margin-top: 20px;
+}
+/* ////////// お知らせ エリア 終了 ////////// */
+
+/* ////////// 信念のエリア 開始　////////// */
+.div02 {
+  position: relative; /* 相対配置 */
+  height: 568px;
+  background: url(../images/spMisesyokaiGry.jpg) no-repeat center center/cover;
+  /*filter: opacity(50%);  0% (透明) ～ 100% (不透明) の範囲で指定 */
+  /*background-color: rgba(0, 0, 0, 0.5); /* 黒色の半透明 (alpha = 0.5) は、反映されないので保留 */
+}
+
+.text {
+  position: absolute; /* 絶対配置 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 中央寄せ */
+  color: white; /* テキストの色 */
+  width: 375px;
+  text-align: center;
+}
+
+.tx02 {
+  font-size: 16px;
+  font-weight: 400; /* Noto Sans JPの文字の太さのMediumは「400」相当 */
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 300px;
+  text-align: center;
+}
+
+.tx02 h2 {
+  font-size: 24px;
+  font-weight: 800; /* 太さの値のBlack=800相当 */
+}
+
+/* 私たちの信念 */
+.p01 {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+/* "Creating Connections"の文字のスタイル */
+.p02 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+/* ////////// 信念のエリア 終了 ////////// */
+
+
+/* ////////// ランキング エリア 開始 ////////// */
+.doBox p {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  width: 157.5px;
+}
+
+.donutGp02 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ////////// ランキング エリア 終了 ////////// */
+/* ↑ 画面ヨコ幅 768px以下は直上の記述を適用 */
+
+
+/* PCサイト（769px以上）のスタイル */
+/* 画面ヨコ幅 768pxを基準として、769pxから上の幅は下記を適用する */
+@media screen and (min-width: 769px) {
+  body {
+    width: 1366px; /* PC用*/
+    font-size: 24px; /* PC用フォントサイズ */
+    font-weight: 400px; /* Noto Sans JPの文字の太さのMediumは「400」相当 */
+  }
+
+  /* フッターのccドーナツのロゴ 166 PC用*/
+  .ccLogoFt {
+    top: 0px;
+    position: relative;
+    left: 0px;
+    text-align: center;
+  }
+
+  /* sns */
+  .snsArea ul {
+    display: flex;
+    justify-content: center;
+    margin-top : 72px;
+  }
+
+
+  /* お知らせ、ランキングにインナーを設置 PC用*/
+  .inner {
+    width: 1200px;
+    /* margin: 20px 20px 21px ; うえ、左右、した */
+    /* background-color: #fff; */
+  }
+
+  /* お知らせ の画像 2枚 PC用*/
+  .donutGp01 img {
+    width: 480px;
+    height: 480px;
+  }
+
+  /* お知らせ の画像 横長 PC用*/
+  .imagesPc03 {
+    width: 1040px;
+    height: 257px;
+    margin-top: 80px;
+  }
+
+  /* 店紹介を背景画像にする PC用 */
+  
+  .div02 {
+    position: relative; /* 相対配置 */
+    background: url(../images/pcMisesyokaiGry.jpg) no-repeat center center/cover;
+  }
+    /*filter: opacity(50%);  0% (透明) ～ 100% (不透明) の範囲で指定 */
+    /*background-color: rgba(0, 0, 0, 0.5); /* 黒色の半透明 (alpha = 0.5) は、反映されないので保留 */
+
+  /* ランキング の画像 PC用*/
+  .doBox img {
+    width: 320px;
+    height: 320px;
+  }
+
+  /* ランキング内の文字 PC用*/  
+  .doBox p {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    width: 320px;
+  }
+}
