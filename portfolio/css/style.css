@@ -1,0 +1,459 @@
+@charset "utf-8";
+
+body {
+    font-family: "Noto Serif JP", serif;
+    width: 100%;
+    line-height: 1.2; /* 行間 */
+    /* htmlとbody のような大きなくくりは必ず width 100%にする */
+    /* htmlとbody のような大きなくくりは max-width しない */
+
+    font-size: 14px;
+/*    background-color: #bbf1ef;  反映確認のために色付け */
+}
+
+/* SP用 */
+.inner {
+    padding: 0 2.66%; 
+    /* 境界線の内側の余白 */
+    /* 親要素　375px　のときに
+    左右に入れたいそれぞれの余白　約10pxの割合にする
+    10px(左右にそれぞれ入れたい余白)÷375px(親要素のヨコ幅)×100%=2.66% */
+
+    width: 100%;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* portfolio */
+h1 {
+    margin: 16px 0 12px 0; /* うえ、みぎ、した、ひだり */
+    font-size: 28px;
+    font-weight: bold;
+    /* border: 3px solid red; */
+    border-radius: 20px;
+
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: "Noto Serif JP", serif;
+}
+/* 「-ポートフォリオ-」SP用 */
+.portKana {
+    font-family: "Noto Serif JP", serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* about の画像 */
+/* 現在の画像：ラベンダー SP用 */
+.aboutImg img {
+    /* width: 13.02%; */
+    width: 26.66%;
+    /* 親要素の boutImgの横幅が768pxのときは、画像の横幅が100pxくらいにする
+    「%」で出す方法→ 100(子要素のヨコ幅)÷768(親要素のヨコ幅)=0.1302
+    0.1302×100%=13.02%
+    「%」表示の時に、小数点第二位まで入れた方が反映させたい形に近くなる */
+
+    height: auto;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+/* 制作物　の各画像 */
+.img01 {
+    width: 100%;
+    height: auto;
+    
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+}
+
+/* h2(about、作品制作、スキル) */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    /* margin-bottom: 10px; */
+/*    margin: 0px 0px 20px 0px;  うえ、みぎ、した、ひだり */
+}
+
+/* h2「about」の周りの余白 */
+.abtMidasi {
+    margin: 0px 0px 10px 0px; /* うえ、みぎ、した、ひだり */
+}
+
+/* ＜連絡先＞の余白 */
+.address {
+    margin-top: 10px;
+}
+
+h3, p, ul {
+    margin: 0 auto;    
+    /* text-align: center; */
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* about のエリア, どんな方向で働きたいのか、自分のこと自分の言葉でざっくり伝える */
+/* about、about画像、テキスト、連絡先 SP用 */
+.areaAbout {
+    /* display: flex; */
+    border: 3px solid #cccccc;
+    border-radius: 20px;
+    width: 100%;
+    /* width: 94.66%; */
+    /* 97.33 */
+    text-align: center;
+    margin: 0px auto; /* 上下、左右 */
+
+    padding: 8px 2.66%; /* 上下、左右 */
+    /* 親要素が375pxの時に左右の余白はそれぞれ約10pxの割合にする
+    10÷375=0.0266 ×100=2.66% */
+}
+/* ////////////////////////////////////////////////////// */
+/* 作品制作のエリア SP用 */
+
+.seisakujun {
+    text-align: right;
+}
+
+/* 01…リノベーションサイト */
+/* 02…台湾サイト */
+.Area01, .Area02 {
+    border: 3px solid #cccccc;
+    border-radius: 20px;
+    width: 100%;
+
+    margin: 0px auto; /* 上下、左右 */
+    margin-top: 10px;
+    padding: 8px 2.66%; /* 上下、左右 */
+    /* 親要素が375pxの時に左右の余白はそれぞれ約10pxの割合にする
+    10÷375=0.0266 ×100=2.66% */
+    
+    /* アニメーション 枠 */
+    /* 横幅を拡大・縮小したときに0.5秒かけてゆっくり伸び縮みする
+   transition: width 1s;  幅の変化に0.5秒のアニメーション */
+
+}
+
+.Area02 {
+    margin-bottom: 20px;
+}
+
+/* 各作品ごとのsakuhin0~のエリアの上に余白を入れる */
+.sakuhin01, 
+.sakuhin02, 
+.sakuhin03,
+.sakuhin04 {
+    /* background-color: blue; */
+    margin-top: 20px;
+}
+
+/* 各作品ごとのulリストの上に余白を入れる */
+.sakuhin01 ul, 
+.sakuhin02 ul, 
+.sakuhin03 ul,
+.sakuhin04 ul {
+    /* background-color: blue; */
+    margin-top: 10px;
+}
+
+/* 作品制作のテキスト */
+.sakuTx {
+    margin-top: 20px;
+}
+
+.sakuhin02 ul {
+    /* background-color: blue; */
+    /* margin-top: 20px; */
+}
+
+
+/* 03…ドーナツECサイト */
+.sakuhin03 ul {
+    /* background-color: blue; */
+    /* margin-top: 20px; */
+}
+
+/* スキルのテーブルタグへの記述 開始 */
+table, th, td {
+    border: 1px solid #000000;
+    text-align: center; /* 領域内のものを横方向の中央にする */
+    padding: 5px;
+}
+
+table {
+    margin: 20px auto; /* 表（<table>）を、メインコンテンツエリアの中央に配置する※上下の余白は任意の値でOK */
+}
+
+/* スキルのテーブルタグへの記述 SP用 */
+    
+.tdCategory {
+    width: 40%;
+}
+
+.cateData {
+    width: 60%;
+}
+
+table {
+    width: 70%;
+}
+
+/* 色付け / カテゴリー, 内容 SP用 */
+.tdCateNaiyo {
+    background-color: #f2e5eb;
+
+}
+
+/* スキルのテーブルタグへの記述 終了 */
+
+.gmSiyo {
+    margin-top: 40px;
+    line-height: 1.4; /* 行間 */
+}
+
+.skill02, .skill03, .skill04 {
+    margin-top: 20px;
+}
+
+.skill04 p{
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+/* ////////// アイコンについて 136 ////////// */
+
+/* Github アイコン */
+/* 画像を加工して縦横を小さく編集したものを使用 */
+.gitLink::after {
+    content: url(../images/github-mark01.png);
+    /* display: block; */
+/*    margin-top: 5px; /* 変かも */
+/*    position: absolute; /* 変かも */
+/* Githubの位置調整を、カピぞうのニンジンのアイコンを参考に修正する ★★ */
+
+}
+
+/* Githubアイコンの画像サイズを指定したけど反映されなかったので保留*/
+
+/* .iconGit::after {
+    background-image: url(../images/github-mark00.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width: 20px;
+    height: 20px;
+} */
+
+/* 画像の下のURL SP用 */
+.siteUrl {
+    overflow-wrap: anywhere; /* 親要素の幅に合わせて文章を折り返す */
+}
+
+/* //////////////////// */
+/*a {
+    text-decoration: underline;
+} */
+
+/* 「▶サイトをみる」の右側に余白を入れる SP用 */
+.siteMiru {
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+/* 各「サイトをみる」を右寄せにする SP用 */
+/* 各「コードをみる」を右寄せにする SP用 */
+.siteMiru, .gitLink {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+}
+
+/* CSS用 横棒線 SP用 */
+.border01 {
+    width: 90%;
+    height: 30px;
+    border-bottom: 1px solid #808080;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* 横棒線「職業訓練で学んだこと」と「業務で使用したツール」の間の仕切り */
+.border02 {
+    width: 90%;
+    height: 30px;
+    border-bottom: 1px solid #808080;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* ////////////////////////////////////////////////////// */    
+/* PCサイト（769px以上）用 */
+/* 画面ヨコ幅 768pxを基準として、769pxから上の幅は下記を適用する */
+@media screen and (min-width: 769px) {
+
+    /* 横幅に合わせて中央に寄せる */
+    body {
+        margin: 0 auto;
+        /* background-color: antiquewhite; */
+    }
+    
+    /* PC用(SPは 12行目) */
+    .inner {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* 「Portfolio」 PC用 */
+    h1 {
+        margin: 24px 0 20px 0; /* うえ、みぎ、した、ひだり */
+        /* font-size: 36px; */
+        font-size: 2.25rem;
+
+        font-weight: bold;
+        border-radius: 20px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        line-height: 0.8;
+        /* border: 3px solid red; */
+    }
+    
+    /* about の画像 */
+    /* 現在の画像：ラベンダー PC用 */
+    /* 親要素（areaAbout）には、areaAboutの親が1200pxくらいの時にareaAboutは1000pxの割合になるようにしている */
+    .aboutImg {
+        width: 20%;
+    }
+
+    /* about の画像 */
+    /* 現在の画像：ラベンダー PC用 */
+    .aboutImg img {
+        width: 100%;
+        /* width: 13.02%; */
+    }
+
+
+    /* 作品制作のエリア PC用(spは123行目) */
+    /* 01…リノベーションサイト PC用 */
+    /* 02…台湾サイト PC用 */
+    /* Area01、Area02 の横幅について、
+    親の inner 1200pxのときは、子のArea01、Area02は 1000px になるような割合にした */
+    .Area01, .Area02 {
+        border: 3px solid #cccccc;
+        border-radius: 20px;
+        width: 83.33%;
+        /* 親要素のヨコ幅が1200pxのときは、子要素のヨコ幅を1000pxくらいにするような割合にする
+        %の求め方：
+        1000(子要素のヨコ幅)÷1200(親要素のヨコ幅)=0.8333
+        0.8333×100=83.33%
+        「%」表示の時に、小数点第二位まで入れた方が反映させたい形に近くなる */
+
+
+        margin: 0px auto; /* 上下、左右 */
+        margin-top: 20px;
+        padding:20px 2%;
+        /* 上下20px、左右 20px相当 */
+        /* 左右について
+        親要素　約1000px　のときに、
+        左右にそれぞれ　約20pxの余白を入れるような割合にする
+        20px(左右にそれぞれ入れたい余白)÷約1000px(親要素のヨコ幅)×100=2% */
+    }
+
+    /* SPは 84行目 */
+    /* about のエリア, どんな方向で働きたいのか、自分のことを自分の言葉でざっくり伝える PC用*/
+    .areaAbout {
+        /* width: 100%; */
+        width: 83.33%;
+        /* 1000÷1200×100%=%の出し方 */
+        /* 親要素が1200pxくらいの時に1000の割合になる */
+
+        margin: 0 auto;
+        display: flex;
+
+        padding:20px 2%;
+        /* 上下20px、左右 20px相当 */
+        /* 左右について
+        親要素　約1000px　のときに、
+        左右にそれぞれ　約20pxの余白を入れるような割合にする
+        20px(左右にそれぞれ入れたい余白)÷約1000px(親要素のヨコ幅)×100=2% */
+    }
+
+    /* SPは 63行目 */
+    /* h2「about」の周りの余白と位置 PC用 */
+    .abtMidasi {
+        margin: 20px 0px 10px 0px; /* うえ、みぎ、した、ひだり */
+        text-align: left;
+    }
+
+    /* about のテキスト PC用 */
+    .aboutText p {
+        text-align: start;
+    }
+
+    /* SPは 68行目 */
+    /* ＜連絡先＞の余白 PC用 */
+    .address {
+        margin-top: 20px;
+            text-align: left;
+    }
+
+    /* SPは 116行目 */
+    /* 各作品ごとのsakuhin0~のエリアの上に余白を入れる PC用 */
+    .sakuhin01, 
+    .sakuhin02, 
+    .sakuhin03,
+    .sakuhin04 {
+        /* background-color: blue; */
+        margin-top: 20px; /* ←これをPC版のときは無効にする */
+    }
+
+    /* 各作品ごとのリストの上に余白を入れる PC用 */
+    .sakuhin01 ul, 
+    .sakuhin02 ul,
+    .sakuhin03 ul, 
+    .sakuhin04 ul {
+        /* background-color: blue; */
+        margin-top: 10px;
+    }
+
+    /* 作品ごとの横幅 PC用 */
+    .sakuhin01, 
+    .sakuhin02, 
+    .sakuhin03,
+    .sakuhin04 {
+        width: 30%;
+    }
+
+    /* CSS用 横棒線 PC用 */
+    .border01 {
+        display: none;
+    }
+
+    .sakuCor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+    }
+    
+    /* スキルのテーブルタグへの記述 PC用 */
+    .tdCategory, .cateData {
+        margin: 15px auto;
+    }
+}
